@@ -18,7 +18,7 @@ class SignInScreen extends StatelessWidget {
         body: Stack(
           children: [
             Positioned(
-              top: 20,
+              top: 10,
               left: 20,
               child: Align(
                 alignment: Alignment.topLeft,
@@ -31,7 +31,7 @@ class SignInScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(86),
+              top: propHeight(75),
               left: propWidth(20),
               child: const Row(
                 children: [
@@ -56,7 +56,7 @@ class SignInScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(120),
+              top: propHeight(110),
               left: propWidth(20),
               child: const Text(
                 "remind me who you are",
@@ -68,7 +68,7 @@ class SignInScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(180),
+              top: propHeight(170),
               left: propWidth(20),
               child: const Text(
                 "Username",
@@ -79,7 +79,7 @@ class SignInScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(210),
+              top: propHeight(200),
               left: propWidth(20),
               child: SmallField(
                 textController: username,
@@ -88,7 +88,7 @@ class SignInScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(270),
+              top: propHeight(260),
               left: propWidth(20),
               child: const Text(
                 "Password",
@@ -99,7 +99,7 @@ class SignInScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(300),
+              top: propHeight(290),
               left: propWidth(20),
               child: SmallField(
                 textController: password,
@@ -110,9 +110,7 @@ class SignInScreen extends StatelessWidget {
             Positioned(
               top: propHeight(405),
               left: propWidth(20),
-              child:  QuoteCard(
-                quote: quotes[1]
-              ),
+              child: QuoteCard(quote: quotes[1]),
             ),
             Positioned(
               top: propHeight(695),

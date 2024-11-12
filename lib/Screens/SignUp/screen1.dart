@@ -18,7 +18,7 @@ class UsernameScreen extends StatelessWidget {
         body: Stack(
           children: [
             Positioned(
-              top: propHeight(20),
+              top: propHeight(10),
               left: propWidth(20),
               child: BackButton(
                 onPressed: () {
@@ -28,7 +28,7 @@ class UsernameScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(85),
+              top: propHeight(75),
               left: propWidth(20),
               child: const Text(
                 "Got a handle, or do I",
@@ -39,7 +39,7 @@ class UsernameScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(120),
+              top: propHeight(110),
               left: propWidth(20),
               child: const Row(
                 children: [
@@ -85,7 +85,7 @@ class UsernameScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(180),
+              top: propHeight(170),
               left: propWidth(20),
               child: const Text(
                 "Username",
@@ -96,7 +96,7 @@ class UsernameScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(210),
+              top: propHeight(200),
               left: propWidth(20),
               child: SmallField(
                 textController: username,
@@ -105,7 +105,7 @@ class UsernameScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(390),
+              top: propHeight(380),
               left: propWidth(20),
               child: QuoteCard(
                 quote: quotes[2],

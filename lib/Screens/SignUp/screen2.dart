@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon/Screens/SignUp/screen3.dart';
 
 import '../../Components/button.dart';
 import '../../Components/quotes.dart';
@@ -19,7 +20,7 @@ class EmailPasswordScreen extends StatelessWidget {
         body: Stack(
           children: [
             Positioned(
-              top: propHeight(20),
+              top: propHeight(10),
               left: propWidth(20),
               child: BackButton(
                 onPressed: () {
@@ -29,7 +30,7 @@ class EmailPasswordScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(85),
+              top: propHeight(75),
               left: propWidth(20),
               child: Flexible(
                 child: SizedBox(
@@ -45,7 +46,7 @@ class EmailPasswordScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(220),
+              top: propHeight(210),
               left: propWidth(20),
               child: const Text(
                 "Email",
@@ -56,7 +57,7 @@ class EmailPasswordScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(250),
+              top: propHeight(240),
               left: propWidth(20),
               child: SmallField(
                 textController: email,
@@ -65,7 +66,7 @@ class EmailPasswordScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(305),
+              top: propHeight(295),
               left: propWidth(20),
               child: const Text(
                 "Password",
@@ -76,7 +77,7 @@ class EmailPasswordScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(340),
+              top: propHeight(330),
               left: propWidth(20),
               child: SmallField(
                 textController: password,
@@ -85,7 +86,7 @@ class EmailPasswordScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(400),
+              top: propHeight(390),
               left: propWidth(20),
               child: QuoteCard(
                 quote: quotes[3],
@@ -96,7 +97,14 @@ class EmailPasswordScreen extends StatelessWidget {
               left: propWidth(45),
               child: BigButton(
                 text: "Move Forward",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const OTPScreen(),
+                    ),
+                  );
+                },
               ),
             )
           ],
