@@ -3,7 +3,13 @@ import 'package:hackathon/Components/button.dart';
 import 'package:hackathon/constants.dart';
 
 class CardWidget extends StatelessWidget {
-  const CardWidget({super.key});
+  const CardWidget({
+    super.key,
+    required this.role,
+    required this.description,
+  });
+  final String role;
+  final String description;
 
   @override
   Widget build(BuildContext context) {

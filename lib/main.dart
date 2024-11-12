@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon/Components/component_test.dart';
-//import 'package:hackathon/Screens/splashsceen.dart';
+//import 'package:hackathon/Components/component_test.dart';
+import 'package:hackathon/Screens/splashsceen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ComponentTest(),
+      home: const SplashScreen(),
     );
   }
 }

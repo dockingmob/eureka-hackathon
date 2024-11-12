@@ -9,7 +9,7 @@ class QuoteCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  SizedBox(
+    return SizedBox(
         width: 350,
         height: 300,
         child: Column(
@@ -21,11 +21,17 @@ class QuoteCard extends StatelessWidget {
                 width: 60,
               ),
             ),
-            Text(
-              quote,
-              style: const TextStyle(
-                fontFamily: "BagelFatOne",
-                fontSize: 30,
+            Expanded(
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  quote,
+                  textAlign: TextAlign.left,
+                  style: const TextStyle(
+                    fontFamily: "BagelFatOne",
+                    fontSize: 30,
+                  ),
+                ),
               ),
             ),
             const Align(
