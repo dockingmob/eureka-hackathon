@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/Components/button.dart';
 import 'package:hackathon/constants.dart';
+import 'package:hackathon/sizeconfig.dart';
 
 class CardWidget extends StatelessWidget {
   const CardWidget({
@@ -14,8 +15,8 @@ class CardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 300,
-      width: 350,
+      height: propHeight(300),
+      width: propWidth(350),
       child: DecoratedBox(
         decoration: BoxDecoration(
           boxShadow: const [
@@ -63,9 +64,12 @@ class CardWidget extends StatelessWidget {
                   fontWeight: FontWeight.normal,
                 ),
               ),
-              const Align(
+              Align(
                 alignment: Alignment.bottomCenter,
-                child: BigButton(text: "Choose your path"),
+                child: BigButton(
+                  onPressed: () {},
+                  text: "Choose your path",
+                ),
               )
             ],
           ),

@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:hackathon/Components/component_test.dart';
+import 'package:hackathon/Screens/onboarding.dart';
 import 'package:hackathon/constants.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => const ComponentTest(),
+          builder: (context) => const OnboardingScreen(),
         ),
       ),
     );

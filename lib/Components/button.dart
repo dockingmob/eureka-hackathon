@@ -1,39 +1,47 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/constants.dart';
+import 'package:hackathon/sizeconfig.dart';
 
 class BigButton extends StatelessWidget {
   const BigButton({
     super.key,
     required this.text,
+    required this.onPressed,
   });
   final String text;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 300,
-      height: 60,
-      child: DecoratedBox(
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.3),
-              blurRadius: 1.5,
-              spreadRadius: 1.5,
-              offset: const Offset(0, 4),
-            )
-          ],
-          color: kSecondaryColor,
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Center(
-          child: Text(
-            text,
-            style: const TextStyle(
-              fontFamily: "Nunito",
-              fontSize: 24,
-              fontWeight: FontWeight.w500,
-              color: Colors.white,
+    return IntrinsicWidth(
+      child: GestureDetector(
+        onTap: onPressed,
+        child: SizedBox(
+          width: propWidth(300),
+          height: propHeight(60),
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.3),
+                  blurRadius: 1.5,
+                  spreadRadius: 1.5,
+                  offset: const Offset(0, 4),
+                )
+              ],
+              color: kSecondaryColor,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Center(
+              child: Text(
+                text,
+                style: const TextStyle(
+                  fontFamily: "Nunito",
+                  fontSize: 24,
+                  fontWeight: FontWeight.w900,
+                  color: Colors.white,
+                ),
+              ),
             ),
           ),
         ),
@@ -48,8 +56,8 @@ class QuestionnaireButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 350,
-      height: 70,
+      width: propWidth(350),
+      height: propHeight(70),
       child: DecoratedBox(
         decoration: BoxDecoration(
           color: kPrimaryColor,

@@ -1,36 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hackathon/constants.dart';
+import 'package:hackathon/sizeconfig.dart';
 
 class SmallField extends StatelessWidget {
   const SmallField({
     super.key,
     required this.textController,
+    this.hint,
+    required this.obscureText,
   });
   final TextEditingController textController;
+  final String? hint;
+  final bool obscureText;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 325,
-      height: 50,
+      width: propWidth(350),
+      height: propHeight(50),
       child: TextFormField(
+        obscureText: obscureText,
         controller: textController,
         decoration: InputDecoration(
           fillColor: Colors.grey.withOpacity(0.5),
           filled: true,
-          hintText: "Hint Text",
+          hintText: hint ?? "Hint Text",
           hintStyle: const TextStyle(
             fontFamily: "Poppins",
             fontSize: 16,
           ),
-          label: const Text("Label"),
-          labelStyle: const TextStyle(
-            fontFamily: "Poppins",
-            fontSize: 16,
-          ),
-          floatingLabelBehavior: FloatingLabelBehavior.auto,
-          floatingLabelAlignment: FloatingLabelAlignment.start,
           floatingLabelStyle: const TextStyle(
             fontFamily: "Poppins",
             fontSize: 14,
@@ -65,8 +64,8 @@ class OTPField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 65,
-      height: 65,
+      width: propWidth(65),
+      height: propHeight(65),
       child: TextFormField(
         onChanged: (value) {
           if (value.length == 1) {
@@ -115,8 +114,8 @@ class BigField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 350,
-      height: 350,
+      width: propWidth(350),
+      height: propHeight(350),
       child: Expanded(
         child: TextFormField(
           controller: textController,
