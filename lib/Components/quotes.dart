@@ -17,7 +17,9 @@ class QuoteCard extends StatelessWidget {
             const Align(
               alignment: Alignment.topLeft,
               child: Image(
-                image: AssetImage("Assets/images/icons8-quotes-90 (2).png"),
+                image: AssetImage(
+                  "Assets/images/icons8-quotes-90 (2).png",
+                ),
                 width: 60,
               ),
             ),
@@ -37,7 +39,9 @@ class QuoteCard extends StatelessWidget {
             const Align(
               alignment: Alignment.bottomRight,
               child: Image(
-                image: AssetImage("Assets/images/icons8-quotes-90.png"),
+                image: AssetImage(
+                  "Assets/images/icons8-quotes-90.png",
+                ),
                 width: 60,
               ),
             ),
