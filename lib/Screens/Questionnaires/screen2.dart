@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon/Screens/Questionnaires/screen2.dart';
-import 'package:hackathon/constants.dart';
+import 'package:hackathon/Components/button.dart';
 
-import '../../Components/button.dart';
-import '../../Components/quotes.dart';
 import '../../sizeconfig.dart';
 
-class IntroScreen extends StatelessWidget {
-  const IntroScreen({super.key});
+class QScreenOne extends StatelessWidget {
+  const QScreenOne({super.key});
 
   @override
   Widget build(BuildContext context) {
     Sizeconfig.init(context);
-    return Scaffold(
-      backgroundColor: kPrimaryColor,
-      body: SafeArea(
-        child: Stack(
+    return SafeArea(
+      child: Scaffold(
+        body: Stack(
           children: [
             Positioned(
               top: propHeight(10),
@@ -29,12 +25,12 @@ class IntroScreen extends StatelessWidget {
             ),
             Positioned(
               top: propHeight(75),
-              left: propWidth(30),
+              left: propWidth(20),
               child: Flexible(
                 child: SizedBox(
                   width: propHeight(350),
                   child: const Text(
-                    "Alright, let's get some things straight first - answers and checkboxes, please!",
+                    "Traveler, do you know any of the tech or engineering of this land?",
                     style: TextStyle(
                       fontFamily: "BagelFatOne",
                       fontSize: 30,
@@ -44,25 +40,19 @@ class IntroScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(390),
+              top: propHeight(330),
               left: propWidth(20),
-              child: QuoteCard(
-                quote: quotes.last,
+              child: QuestionnaireButton(
+                label: "Yes",
+                onPressed: () {},
               ),
             ),
             Positioned(
-              top: propHeight(695),
-              left: propWidth(45),
-              child: BigButton(
-                text: "Move Forward",
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const QScreenOne(),
-                    ),
-                  );
-                },
+              top: propHeight(430),
+              left: propWidth(20),
+              child: QuestionnaireButton(
+                label: "No",
+                onPressed: () {},
               ),
             )
           ],

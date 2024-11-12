@@ -64,7 +64,7 @@ class OTPScreen extends StatelessWidget {
               top: propHeight(390),
               left: propWidth(20),
               child: QuoteCard(
-                quote: quotes[3],
+                quote: quotes[4],
               ),
             ),
             Positioned(

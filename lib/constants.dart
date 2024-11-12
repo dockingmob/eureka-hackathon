@@ -10,7 +10,6 @@ const List<String> quotes = [
   "Fall seven times, stand up eight",
   "The most difficult thing is the decision to act, the rest is merely tenacity",
   "The person you are destined to become is the person you decide to be today",
-  "Self Improvement is not a destination but a journey of continous learning and growth"
+  "Self Improvement is not a destination but a journey of continous learning and growth",
   "Success is not final, failure is not fatal; it is the courage to continue that counts."
-  ""
 ];

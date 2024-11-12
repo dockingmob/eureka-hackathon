@@ -51,38 +51,47 @@ class BigButton extends StatelessWidget {
 }
 
 class QuestionnaireButton extends StatelessWidget {
-  const QuestionnaireButton({super.key});
+  const QuestionnaireButton({
+    super.key,
+    required this.label,
+    required this.onPressed,
+  });
+  final String label;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: propWidth(350),
-      height: propHeight(70),
-      child: DecoratedBox(
-        decoration: BoxDecoration(
-          color: kPrimaryColor,
-          borderRadius: BorderRadius.circular(15),
-          border: Border.all(
-            color: kSecondaryColor,
-            width: 4,
+    return GestureDetector(
+      onTap: onPressed,
+      child: SizedBox(
+        width: propWidth(350),
+        height: propHeight(70),
+        child: DecoratedBox(
+          decoration: BoxDecoration(
+            color: kPrimaryColor,
+            borderRadius: BorderRadius.circular(15),
+            border: Border.all(
+              color: kSecondaryColor,
+              width: 4,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.3),
+                blurRadius: 1.5,
+                spreadRadius: 1.5,
+                offset: const Offset(0, 4),
+              )
+            ],
           ),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.3),
-              blurRadius: 1.5,
-              spreadRadius: 1.5,
-              offset: const Offset(0, 4),
-            )
-          ],
-        ),
-        child: const Expanded(
-          child: Center(
-            child: Text(
-              "Text will be here",
-              style: TextStyle(
-                fontFamily: "Nunito",
-                fontSize: 24,
-                fontWeight: FontWeight.w900,
+          child: Expanded(
+            child: Center(
+              child: Text(
+                label,
+                style: const TextStyle(
+                  fontFamily: "Nunito",
+                  fontSize: 24,
+                  fontWeight: FontWeight.w900,
+                ),
               ),
             ),
           ),
