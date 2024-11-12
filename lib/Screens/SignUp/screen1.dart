@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/Components/quotes.dart';
 import 'package:hackathon/Components/textfields.dart';
+import 'package:hackathon/Screens/SignUp/screen2.dart';
 import 'package:hackathon/constants.dart';
 import 'package:hackathon/sizeconfig.dart';
 
@@ -114,8 +115,15 @@ class UsernameScreen extends StatelessWidget {
               top: propHeight(695),
               left: propWidth(45),
               child: BigButton(
-                text: "Continue the journey",
-                onPressed: () {},
+                text: "Move Forward",
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const EmailPasswordScreen(),
+                    ),
+                  );
+                },
               ),
             )
           ],
