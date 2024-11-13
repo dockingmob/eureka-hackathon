@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon/Components/button.dart';
-import 'package:hackathon/Components/textfields.dart';
-import 'package:hackathon/Screens/Questionnaires/screen13.dart';
 
+import '../../Components/button.dart';
+import '../../Components/textfields.dart';
 import '../../sizeconfig.dart';
 
-class QScreenEleven extends StatelessWidget {
-  const QScreenEleven({super.key});
+class QScreenTwelve extends StatelessWidget {
+  const QScreenTwelve({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +32,7 @@ class QScreenEleven extends StatelessWidget {
                 child: SizedBox(
                   width: propHeight(350),
                   child: const Text(
-                    "Traveler, how many hours per week are you willing to commit to learning and building projects?",
+                    "Traveler, do you have a preferred timeline for how fast you want to progress?",
                     style: TextStyle(
                       fontFamily: "BagelFatOne",
                       fontSize: 30,
@@ -56,12 +55,7 @@ class QScreenEleven extends StatelessWidget {
               child: BigButton(
                 onPressed: () {
                   controller.dispose();
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const QScreenTwelve(),
-                    ),
-                  );
+                  Navigator.pop(context);
                 },
               ),
             ),
