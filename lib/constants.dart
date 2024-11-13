@@ -13,3 +13,23 @@ const List<String> quotes = [
   "Self Improvement is not a destination but a journey of continous learning and growth",
   "Success is not final, failure is not fatal; it is the courage to continue that counts."
 ];
+
+const List<String> languages = [
+  'C++',
+  'JavaScript',
+  'Python',
+  'Dart',
+  'Java',
+  'C#',
+  'Kotlin',
+  'R',
+  'Swift',
+  'Ruby',
+  'Go',
+  'PHP',
+  'TypeScript',
+  'Rust',
+  'SQL',
+  'Scala',
+  'None'
+];

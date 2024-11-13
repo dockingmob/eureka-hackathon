@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/Components/button.dart';
 import 'package:hackathon/Components/textfields.dart';
+import 'package:hackathon/Screens/Questionnaires/screen5.dart';
 
 import '../../sizeconfig.dart';
 
@@ -54,6 +55,12 @@ class QScreenTwo extends StatelessWidget {
                 child: BigButton(
                   onPressed: () {
                     controller.dispose();
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const QScreenFour(),
+                      ),
+                    );
                   },
                 ))
           ],

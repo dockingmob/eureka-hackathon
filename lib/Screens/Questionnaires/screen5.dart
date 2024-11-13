@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon/Screens/Questionnaires/screen5.dart';
 
 import '../../Components/button.dart';
-import '../../Components/textfields.dart';
 import '../../sizeconfig.dart';
 
-class QScreenThree extends StatelessWidget {
-  const QScreenThree({super.key});
+class QScreenFour extends StatelessWidget {
+  const QScreenFour({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Sizeconfig.init(context);
-    TextEditingController controller = TextEditingController();
     return SafeArea(
       child: Scaffold(
         body: Stack(
@@ -33,7 +29,7 @@ class QScreenThree extends StatelessWidget {
                 child: SizedBox(
                   width: propHeight(350),
                   child: const Text(
-                    "Traveler, tell me about your past lives - this will help you along your way",
+                    "Do you have an ideaa of what you want to do?",
                     style: TextStyle(
                       fontFamily: "BagelFatOne",
                       fontSize: 30,
@@ -43,26 +39,21 @@ class QScreenThree extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(300),
+              top: propHeight(330),
               left: propWidth(20),
-              child: BigField(
-                textController: controller,
+              child: QuestionnaireButton(
+                label: "Yes",
+                onPressed: () {},
               ),
             ),
             Positioned(
-                top: propHeight(695),
-                left: propWidth(45),
-                child: BigButton(
-                  onPressed: () {
-                    controller.dispose();
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const QScreenFour(),
-                      ),
-                    );
-                  },
-                ))
+              top: propHeight(430),
+              left: propWidth(20),
+              child: QuestionnaireButton(
+                label: "No",
+                onPressed: () {},
+              ),
+            )
           ],
         ),
       ),
