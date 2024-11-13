@@ -5,10 +5,10 @@ import 'package:hackathon/sizeconfig.dart';
 class BigButton extends StatelessWidget {
   const BigButton({
     super.key,
-    required this.text,
+    this.text,
     required this.onPressed,
   });
-  final String text;
+  final String? text;
   final VoidCallback? onPressed;
 
   @override
@@ -34,7 +34,7 @@ class BigButton extends StatelessWidget {
             ),
             child: Center(
               child: Text(
-                text,
+                text ?? "Move Forward",
                 style: const TextStyle(
                   fontFamily: "Nunito",
                   fontSize: 24,

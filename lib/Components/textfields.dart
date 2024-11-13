@@ -108,8 +108,13 @@ class OTPField extends StatelessWidget {
 }
 
 class BigField extends StatelessWidget {
-  const BigField({super.key, required this.textController});
+  const BigField({
+    super.key,
+    required this.textController,
+    this.hint,
+  });
   final TextEditingController textController;
+  final String? hint;
 
   @override
   Widget build(BuildContext context) {
@@ -128,15 +133,10 @@ class BigField extends StatelessWidget {
           decoration: InputDecoration(
             fillColor: Colors.grey.withOpacity(0.5),
             filled: true,
-            hintText: "Hint Text",
+            hintText: hint ?? "",
             hintStyle: const TextStyle(
               fontFamily: "Poppins",
               fontSize: 20,
-            ),
-            label: const Text("Label"),
-            labelStyle: const TextStyle(
-              fontFamily: "Poppins",
-              fontSize: 16,
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(20),

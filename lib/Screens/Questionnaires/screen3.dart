@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/Components/button.dart';
-import 'package:hackathon/Screens/Questionnaires/screen3.dart';
-import 'package:hackathon/Screens/Questionnaires/screen4.dart';
+import 'package:hackathon/Components/textfields.dart';
 
 import '../../sizeconfig.dart';
 
-class QScreenOne extends StatelessWidget {
-  const QScreenOne({super.key});
+class QScreenTwo extends StatelessWidget {
+  const QScreenTwo({super.key});
 
   @override
   Widget build(BuildContext context) {
     Sizeconfig.init(context);
+    TextEditingController controller = TextEditingController();
     return SafeArea(
       child: Scaffold(
         body: Stack(
@@ -32,7 +32,7 @@ class QScreenOne extends StatelessWidget {
                 child: SizedBox(
                   width: propHeight(350),
                   child: const Text(
-                    "Traveler, do you know any of the tech or engineering of this land?",
+                    "Traveler, do you know anything about tech that intrigues you?",
                     style: TextStyle(
                       fontFamily: "BagelFatOne",
                       fontSize: 30,
@@ -42,35 +42,20 @@ class QScreenOne extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(330),
+              top: propHeight(300),
               left: propWidth(20),
-              child: QuestionnaireButton(
-                label: "Yes",
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const QScreenThree(),
-                    ),
-                  );
-                },
+              child: BigField(
+                textController: controller,
               ),
             ),
             Positioned(
-              top: propHeight(430),
-              left: propWidth(20),
-              child: QuestionnaireButton(
-                label: "No",
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const QScreenTwo(),
-                    ),
-                  );
-                },
-              ),
-            )
+                top: propHeight(695),
+                left: propWidth(45),
+                child: BigButton(
+                  onPressed: () {
+                    controller.dispose();
+                  },
+                ))
           ],
         ),
       ),
