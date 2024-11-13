@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon/Screens/Questionnaires/screen9.dart';
 
 import '../../Components/button.dart';
+import '../../Components/textfields.dart';
 import '../../sizeconfig.dart';
 
-class QScreenSeven extends StatelessWidget {
-  const QScreenSeven({super.key});
+class QScreenNine extends StatelessWidget {
+  const QScreenNine({super.key});
 
   @override
   Widget build(BuildContext context) {
     Sizeconfig.init(context);
+    TextEditingController controller = TextEditingController();
     return SafeArea(
       child: Scaffold(
         body: Stack(
@@ -31,7 +32,7 @@ class QScreenSeven extends StatelessWidget {
                 child: SizedBox(
                   width: propHeight(350),
                   child: const Text(
-                    "Traveler, is this a journey of discovery or you have a destination?",
+                    "Traveler, what are your long-term career goals or dreams?",
                     style: TextStyle(
                       fontFamily: "BagelFatOne",
                       fontSize: 30,
@@ -41,28 +42,20 @@ class QScreenSeven extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(330),
+              top: propHeight(300),
               left: propWidth(20),
-              child: QuestionnaireButton(
-                label: "Discovery",
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const QScreenEight(),
-                    ),
-                  );
-                },
+              child: BigField(
+                textController: controller,
               ),
             ),
             Positioned(
-              top: propHeight(430),
-              left: propWidth(20),
-              child: QuestionnaireButton(
-                label: "I know where I'm going",
-                onPressed: () {},
-              ),
-            )
+                top: propHeight(695),
+                left: propWidth(45),
+                child: BigButton(
+                  onPressed: () {
+                    controller.dispose();
+                  },
+                ))
           ],
         ),
       ),

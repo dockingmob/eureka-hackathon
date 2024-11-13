@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon/Screens/Questionnaires/screen9.dart';
+import 'package:hackathon/Screens/Questionnaires/screen10.dart';
 
 import '../../Components/button.dart';
 import '../../sizeconfig.dart';
 
-class QScreenSeven extends StatelessWidget {
-  const QScreenSeven({super.key});
+class QScreenEight extends StatelessWidget {
+  const QScreenEight({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class QScreenSeven extends StatelessWidget {
                 child: SizedBox(
                   width: propHeight(350),
                   child: const Text(
-                    "Traveler, is this a journey of discovery or you have a destination?",
+                    "Traveler, what are you more intresrted in working with?",
                     style: TextStyle(
                       fontFamily: "BagelFatOne",
                       fontSize: 30,
@@ -44,12 +44,12 @@ class QScreenSeven extends StatelessWidget {
               top: propHeight(330),
               left: propWidth(20),
               child: QuestionnaireButton(
-                label: "Discovery",
+                label: "Hardware",
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const QScreenEight(),
+                      builder: (context) => const QScreenNine(),
                     ),
                   );
                 },
@@ -59,8 +59,30 @@ class QScreenSeven extends StatelessWidget {
               top: propHeight(430),
               left: propWidth(20),
               child: QuestionnaireButton(
-                label: "I know where I'm going",
-                onPressed: () {},
+                label: "Software",
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const QScreenNine(),
+                    ),
+                  );
+                },
+              ),
+            ),
+            Positioned(
+              top: propHeight(530),
+              left: propWidth(20),
+              child: QuestionnaireButton(
+                label: "Combination of both",
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const QScreenNine(),
+                    ),
+                  );
+                },
               ),
             )
           ],
