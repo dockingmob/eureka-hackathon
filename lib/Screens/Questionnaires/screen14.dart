@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon/Screens/Questionnaires/screen15.dart';
 
 import '../../Components/button.dart';
 import '../../sizeconfig.dart';
@@ -45,7 +46,12 @@ class QScreenThirteen extends StatelessWidget {
               child: QuestionnaireButton(
                 label: "Yes",
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const FinalScreen(),
+                    ),
+                  );
                 },
               ),
             ),
@@ -54,7 +60,14 @@ class QScreenThirteen extends StatelessWidget {
               left: propWidth(20),
               child: QuestionnaireButton(
                 label: "I can't really tell",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const FinalScreen(),
+                    ),
+                  );
+                },
               ),
             ),
             Positioned(
@@ -62,7 +75,14 @@ class QScreenThirteen extends StatelessWidget {
               left: propWidth(20),
               child: QuestionnaireButton(
                 label: "No",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const FinalScreen(),
+                    ),
+                  );
+                },
               ),
             )
           ],
