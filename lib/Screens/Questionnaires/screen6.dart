@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/Components/button.dart';
+import 'package:hackathon/Screens/Questionnaires/screen8.dart';
 import 'package:hackathon/constants.dart';
 
 import '../../sizeconfig.dart';
@@ -123,7 +124,14 @@ class QScreenFive extends StatelessWidget {
             Positioned(
               top: propHeight(695),
               left: propWidth(45),
-              child: BigButton(onPressed: () {}),
+              child: BigButton(onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const QScreenSeven(),
+                  ),
+                );
+              }),
             )
           ],
         ),
