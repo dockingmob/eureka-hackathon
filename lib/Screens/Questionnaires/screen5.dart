@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/Screens/Questionnaires/screen6.dart';
+import 'package:hackathon/Screens/Questionnaires/screen7.dart';
 
 import '../../Components/button.dart';
 import '../../sizeconfig.dart';
@@ -44,7 +45,14 @@ class QScreenFour extends StatelessWidget {
               left: propWidth(20),
               child: QuestionnaireButton(
                 label: "Yes",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const QScreen6(),
+                    ),
+                  );
+                },
               ),
             ),
             Positioned(
