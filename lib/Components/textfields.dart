@@ -25,7 +25,7 @@ class SmallField extends StatelessWidget {
         decoration: InputDecoration(
           fillColor: Colors.grey.withOpacity(0.5),
           filled: true,
-          hintText: hint ?? "Hint Text",
+          hintText: hint ?? "",
           hintStyle: const TextStyle(
             fontFamily: "Poppins",
             fontSize: 16,

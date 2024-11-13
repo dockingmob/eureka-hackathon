@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../Components/button.dart';
 import '../../sizeconfig.dart';
+import 'screen12.dart';
 
 class QScreenTen extends StatelessWidget {
   const QScreenTen({super.key});
@@ -44,7 +45,14 @@ class QScreenTen extends StatelessWidget {
               left: propWidth(20),
               child: QuestionnaireButton(
                 label: "Alone",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const QScreenEleven(),
+                    ),
+                  );
+                },
               ),
             ),
             Positioned(
@@ -52,14 +60,30 @@ class QScreenTen extends StatelessWidget {
               left: propWidth(20),
               child: QuestionnaireButton(
                 label: "Small Team",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const QScreenEleven(),
+                    ),
+                  );
+                },
               ),
             ),
             Positioned(
               top: propHeight(530),
               left: propWidth(20),
               child: QuestionnaireButton(
-                  label: "Large Environment", onPressed: () {}),
+                label: "Large Environment",
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const QScreenEleven(),
+                    ),
+                  );
+                },
+              ),
             )
           ],
         ),
