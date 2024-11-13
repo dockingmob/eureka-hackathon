@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon/Screens/Questionnaires/screen11.dart';
 
 import '../../Components/button.dart';
-import '../../Components/textfields.dart';
 import '../../sizeconfig.dart';
 
-class QScreenNine extends StatelessWidget {
-  const QScreenNine({super.key});
+class QScreenTen extends StatelessWidget {
+  const QScreenTen({super.key});
 
   @override
   Widget build(BuildContext context) {
     Sizeconfig.init(context);
-    TextEditingController controller = TextEditingController();
     return SafeArea(
       child: Scaffold(
         body: Stack(
@@ -33,7 +30,7 @@ class QScreenNine extends StatelessWidget {
                 child: SizedBox(
                   width: propHeight(350),
                   child: const Text(
-                    "Traveler, what are your long-term career goals or dreams?",
+                    "Traveler, do you prefer working alone, in small teams, or in large collaborative environments?",
                     style: TextStyle(
                       fontFamily: "BagelFatOne",
                       fontSize: 30,
@@ -43,26 +40,27 @@ class QScreenNine extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: propHeight(300),
+              top: propHeight(330),
               left: propWidth(20),
-              child: BigField(
-                textController: controller,
+              child: QuestionnaireButton(
+                label: "Alone",
+                onPressed: () {},
               ),
             ),
             Positioned(
-                top: propHeight(695),
-                left: propWidth(45),
-                child: BigButton(
-                  onPressed: () {
-                    controller.dispose();
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const QScreenTen(),
-                      ),
-                    );
-                  },
-                ))
+              top: propHeight(430),
+              left: propWidth(20),
+              child: QuestionnaireButton(
+                label: "Small Team",
+                onPressed: () {},
+              ),
+            ),
+            Positioned(
+              top: propHeight(530),
+              left: propWidth(20),
+              child: QuestionnaireButton(
+                  label: "Large Environment", onPressed: () {}),
+            )
           ],
         ),
       ),
