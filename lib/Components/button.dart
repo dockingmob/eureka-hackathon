@@ -118,7 +118,7 @@ class _CheckButtonState extends State<CheckButton> {
   Color fill = kPrimaryColor;
 
   void isIdle(bool val) {
-    if (val) {
+    if (!val) {
       stroke = kAccentColor;
       fill = const Color.fromARGB(255, 163, 215, 189);
     } else {
